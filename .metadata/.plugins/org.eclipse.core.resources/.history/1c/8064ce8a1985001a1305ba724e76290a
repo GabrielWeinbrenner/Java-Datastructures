@@ -1,0 +1,7 @@
+/*             
+ * Linked Lists: Linear structure consisting of nodes. 
+ * 				 Each Node contains a data part that links to the next node 
+ */
+public class LinkedList {
+	
+}
