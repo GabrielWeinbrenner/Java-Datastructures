@@ -1,0 +1,79 @@
+/*             
+ * Linked Lists: Linear structure consisting of nodes. 
+ * 				 Each Node contains a data part that links to the next node 
+ */
+public class LinkedList<T> {
+	Node<T> head;
+	Node<T> tail;
+	int length;
+	
+	public LinkedList() {
+		head = null;
+		tail = null;
+		length = 0;
+	}
+	
+	public boolean contains(T item) {
+		return indexOf(item) >= 0;
+	}
+	
+	public int size() {
+		return length;
+	}
+	
+	public boolean isEmpty() {
+		return length == 0;
+	}
+	
+	public void add(T item) {
+		Node<T> newNode = item;
+		if(this.length == 0) {
+			this.head = 
+		}
+		
+	}
+	
+	public void insertAt(T item, int index) {
+		
+	}
+	
+	public void remove(T item) {
+		
+	}
+	
+	public T removeAt(int index) {
+		return null;
+	}
+	
+	public void removeAll(T item) {
+		
+	}
+	
+	public void clear() {
+		tail = null; length = 0;
+	}
+	
+	public void setAt(T item, int index) {
+		
+	}
+	
+	public T getAt(int index) {
+		
+	}
+	
+	public T get(T item) {
+		
+	}
+	
+	public int indexOf(T item) {
+		Node<T> currentNode = this.head;
+		int count = 0;
+		while(currentNode.next != null) {
+			if(currentNode.val == item) {
+				return count;
+			}
+			count++;
+		}
+		return -1;
+	}
+}

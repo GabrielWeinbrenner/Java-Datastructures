@@ -1,0 +1,94 @@
+/*             
+ * Linked Lists: Linear structure consisting of nodes. 
+ * 				 Each Node contains a data part that links to the next node 
+ */
+public class LinkedList<T> {
+	Node<T> head;
+	Node<T> tail;
+	int length;
+	
+	public LinkedList() {
+		head = null;
+		tail = null;
+		length = 0;
+	}
+	
+	public boolean contains(T item) {
+		return indexOf(item) >= 0;
+	}
+	
+	public int size() {
+		return length;
+	}
+	
+	public boolean isEmpty() {
+		return length == 0;
+	}
+	
+	public void add(T item) {
+		Node<T> newNode = new Node<T>(item);
+		if(this.length == 0) {
+			this.head = newNode;
+			this.tail = newNode;
+		}else {
+			this.tail.next = newNode;
+		}
+		this.length++;
+	}
+	
+	public void insertAt(T item, int index) {
+		Node<T> currentNode = this.head;
+		Node<T> newNode = new Node(item);
+		int count = 0;
+		while(currentNode != null) {
+			if(count == index) {
+				Node<T> nextNode = currentNode.next;
+				currentNode.next = newNode;
+				newNode.next = nextNode;
+			}
+			currentNode = currentNode.next;
+			count++;
+		}
+	}
+	
+	public void remove(T item) {
+		
+	}
+	
+	public T removeAt(int index) {
+		return null;
+	}
+	
+	public void removeAll(T item) {
+		
+	}
+	
+	public void clear() {
+		tail = null; length = 0;
+	}
+	
+	public void setAt(T item, int index) {
+		
+	}
+	
+	public T getAt(int index) {
+		
+	}
+	
+	public T get(T item) {
+		
+	}
+	
+	public int indexOf(T item) {
+		Node<T> currentNode = this.head;
+		int count = 0;
+		while(currentNode != null) {
+			if(currentNode.val == item) {
+				return count;
+			}
+			currentNode = currentNode.next;
+			count++;
+		}
+		return -1;
+	}
+}
