@@ -7,6 +7,6 @@ public class IntNode {
 		this.next = next;
 	}
 	public String toString() {
-		return data+"";
+		return this.next == null ? data+"" : data+" -> ";
 	}
 }
